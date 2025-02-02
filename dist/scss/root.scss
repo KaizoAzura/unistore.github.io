@@ -30,6 +30,18 @@ $whitesmoke-color: whitesmoke;
       transition: 0.3s;
     }
   }
+  &.btn-icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $lightgray-color;
+    transition: 0.1s;
+    &:hover {
+      transform: scale(1.025);
+      transition: 0.1s;
+    }
+  }
 }
 
 // form control
@@ -65,4 +77,7 @@ body {
   color: $black-color;
   font-weight: 300;
   overflow-x: hidden;
+  .text-green {
+    color: $green-color;
+  }
 }

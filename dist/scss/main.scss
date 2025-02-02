@@ -139,6 +139,30 @@
       }
     }
     .bill-container {
+      .bill-row {
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        .btn-icon {
+          scroll-snap-align: center;
+          span {
+            text-overflow: ellipsis;
+            width: 100px;
+            overflow-x: hidden;
+            display: block;
+            white-space: nowrap;
+          }
+          i {
+            margin-right: 12px;
+          }
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -236,6 +260,10 @@
             height: 80px;
           }
         }
+      }
+      // bill container
+      .bill-container {
+        max-height: 140px;
       }
     }
   }

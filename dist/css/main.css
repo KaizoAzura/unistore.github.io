@@ -20,6 +20,18 @@
   transform: scale(1.025);
   transition: 0.3s;
 }
+.btn.btn-icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #d3d3d3;
+  transition: 0.1s;
+}
+.btn.btn-icon:hover {
+  transform: scale(1.025);
+  transition: 0.1s;
+}
 
 .form-control {
   background-color: whitesmoke;
@@ -62,6 +74,9 @@ body {
   color: #101010;
   font-weight: 300;
   overflow-x: hidden;
+}
+body .text-green {
+  color: #10b981;
 }
 
 .navbar-brand {
@@ -193,6 +208,31 @@ body {
   width: 100px;
   height: 100px;
 }
+.main-content .category .bill-container .bill-row {
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+}
+.main-content .category .bill-container .bill-row .btn-icon {
+  scroll-snap-align: center;
+}
+.main-content .category .bill-container .bill-row .btn-icon span {
+  text-overflow: ellipsis;
+  width: 100px;
+  overflow-x: hidden;
+  display: block;
+  white-space: nowrap;
+}
+.main-content .category .bill-container .bill-row .btn-icon i {
+  margin-right: 12px;
+}
+.main-content .category .bill-container .bill-row::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 576px) {
   .sidebar {
     width: 50%;
@@ -259,6 +299,9 @@ body {
   .main-content .category .featured-product .product-container img {
     width: 100px;
     height: 80px;
+  }
+  .main-content .category .bill-container {
+    max-height: 140px;
   }
 }
 @media (min-width: 1200px) {

@@ -20,6 +20,18 @@
   transform: scale(1.025);
   transition: 0.3s;
 }
+.btn.btn-icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #d3d3d3;
+  transition: 0.1s;
+}
+.btn.btn-icon:hover {
+  transform: scale(1.025);
+  transition: 0.1s;
+}
 
 .form-control {
   background-color: whitesmoke;
@@ -62,4 +74,7 @@ body {
   color: #101010;
   font-weight: 300;
   overflow-x: hidden;
+}
+body .text-green {
+  color: #10b981;
 }/*# sourceMappingURL=root.css.map */
