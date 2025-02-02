@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+.btn {
+  background-color: whitesmoke;
+  font-size: 16px;
+  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+}
+.btn:hover {
+  background-color: #d3d3d3;
+}
+.btn.btn-orange {
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #fd9733;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.btn.btn-orange:hover {
+  transform: scale(1.025);
+  transition: 0.3s;
+}
+
+.form-control {
+  background-color: whitesmoke;
+  border: 0;
+  height: 40px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.form-control::-moz-placeholder {
+  font-size: 14px;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.form-control::placeholder {
+  font-size: 14px;
+  transition: 0.3s;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 0;
+  transition: 0.3s;
+  background-color: whitesmoke;
+}
+.form-control:focus::-moz-placeholder {
+  font-size: 16px;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+.form-control:focus::placeholder {
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #101010;
+  font-weight: 300;
+  overflow-x: hidden;
+}/*# sourceMappingURL=root.css.map */

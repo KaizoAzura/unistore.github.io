@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniStore - Buy, Sell and Service</title>
+    <link rel="icon" type="image/x-icon" href="src/img/logo.png" />
+    <!-- link booststrap -->
+    <link
+      rel="stylesheet"
+      href="dist/bootstrap-5.3.3/dist/css/bootstrap.min.css"
+    />
+    <!-- link css -->
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <!-- link icon -->
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <section class="sidebar fixed-top px-3">
+      <!-- header sidebar -->
+      <div
+        class="d-flex align-items-center justify-content-between py-2 py-lg-0"
+      >
+        <a class="navbar-brand d-lg-none" href="#">
+          <img
+            src="src/img/logo.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-center"
+          />
+          <span class="text-icon">UniStore</span>
+        </a>
+        <button class="btn btn-nav d-lg-none" id="btnClose">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+      </div>
+      <!-- end header sidebar -->
+      <ul class="navbar-nav py-2">
+        <li class="nav-item d-none d-lg-inline">
+          <a class="btn btn-nav mb-4 sidebar-toggler" href="#!"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded active" href="#!"
+            ><i class="fa-solid fa-house"></i
+            ><span class="text-icon">Homepage</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-solid fa-cart-shopping"></i
+            ><span class="text-icon">Cart</span></a
+          >
+        </li>
+        <hr class="my-2" />
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-solid fa-money-bill"></i
+            ><span class="text-icon">Payment</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-solid fa-clock-rotate-left"></i
+            ><span class="text-icon">History</span></a
+          >
+        </li>
+        <hr class="my-2" />
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-solid fa-store"></i
+            ><span class="text-icon">Seller</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-solid fa-gear"></i
+            ><span class="text-icon">Setting</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-regular fa-circle-question"></i
+            ><span class="text-icon">Help</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-solid fa-headset"></i
+            ><span class="text-icon">Support</span></a
+          >
+        </li>
+      </ul>
+    </section>
+    <!-- end sidebar -->
+    <!-- content -->
+    <section class="content">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand py-2 sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="src/img/logo.png"
+              alt="Logo"
+              width="30"
+              height="30"
+              class="d-inline-block align-text-center"
+            />
+            <span>UniStore</span>
+          </a>
+
+          <div class="menu-nav">
+            <ul class="navbar-nav ms-auto">
+              <!-- form 992px up -->
+              <form class="d-none d-lg-flex" role="search">
+                <input
+                  class="form-control me-2 search-form"
+                  type="search"
+                  placeholder="Search Product..."
+                  aria-label="Search"
+                />
+                <button class="btn btn-nav" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <!-- end form 992px up -->
+              <li class="nav-item d-lg-none">
+                <a class="btn btn-nav ms-2" href="#!"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-nav ms-2" href="#!"
+                  ><i class="fa-regular fa-bell"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-nav ms-2 profile" href="#!"
+                  ><img src="src/img/profil.JPG" alt="Profile"
+                /></a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <a class="btn btn-nav ms-2 sidebar-toggler" href="#!"
+                  ><i class="fa-solid fa-bars"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- end navbar -->
+      <!-- main content -->
+      <div class="main-content py-2">
+        <div class="container-fluid">
+          <!-- jumbotron -->
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <div class="jumbotron-1 jumbotron rounded p-3">
+                <h1>Check Out Today's Flashsale</h1>
+                <p class="d-none d-sm-flex">
+                  Get ready for an electrifying shopping experience! Offering
+                  deals for a limited time.
+                </p>
+                <a href="#!" class="btn btn-orange">Shop the sale</a>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 mt-3 mt-lg-0">
+              <div class="jumbotron-2 jumbotron rounded p-3">
+                <h1>Summer Sale</h1>
+                <p class="d-none d-sm-flex">Discount 40%</p>
+                <a href="#!" class="btn btn-orange">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <!-- end jumbotron -->
+          <!-- category -->
+          <div class="card my-3 category">
+            <div class="card-body">
+              <div class="row">
+                <!-- Featured Categories -->
+                <div class="col-12 col-lg-6 mb-3">
+                  <h5 class="fw-bold">Featured Categories</h5>
+                  <div class="row featured-product">
+                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
+                      <a href="#!" class="product-container rounded py-2 px-3">
+                        <img src="src/img/macbook.png" alt="macbook" />
+                        <h6 class="mt-2">Macbook</h6></a
+                      >
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
+                      <a href="#!" class="product-container rounded py-2 px-3">
+                        <img src="src/img/iphone.png" alt="iphone" />
+                        <h6 class="mt-2">iPhone</h6></a
+                      >
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
+                      <a href="#!" class="product-container rounded py-2 px-3">
+                        <img src="src/img/playstation.png" alt="playstation" />
+                        <h6 class="mt-2">PlayStation</h6></a
+                      >
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
+                      <a href="#!" class="product-container rounded py-2 px-3">
+                        <img src="src/img/airpods.png" alt="airpods.png" />
+                        <h6 class="mt-2">AirPods</h6></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- end Featured Categories -->
+                <!-- bill categories -->
+                <div class="col-12 col-lg-6 mb-3">
+                  <h5 class="fw-bold mb-3">Top Up & Bills</h5>
+                  <div class="card bill-container p-0">
+                    <div class="card-body">
+                      <div class="row px-3"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end bill categories -->
+              </div>
+            </div>
+          </div>
+          <!-- end category -->
+        </div>
+      </div>
+      <!-- end main content -->
+    </section>
+    <!-- end content -->
+    <!-- link js bootstrap -->
+    <script src="dist/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>

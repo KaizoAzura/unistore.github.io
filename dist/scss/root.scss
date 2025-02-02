@@ -1,0 +1,68 @@
+$green-color: #10b981;
+$white-color: #ffffff;
+$pink-color: #ef4444;
+$orange-color: #fd9733;
+$black-color: #101010;
+$gray-color: #808080;
+$lightgray-color: #d3d3d3;
+$whitesmoke-color: whitesmoke;
+
+// font style Public sans
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+// button style
+.btn {
+  background-color: $whitesmoke-color;
+  font-size: 16px;
+  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    background-color: $lightgray-color;
+  }
+  &.btn-orange {
+    width: max-content;
+    background-color: $orange-color;
+    color: $white-color;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.025);
+      transition: 0.3s;
+    }
+  }
+}
+
+// form control
+.form-control {
+  background-color: $whitesmoke-color;
+  border: 0;
+  height: 40px;
+  font-size: 16px;
+  transition: 0.3s;
+  &::placeholder {
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  &:focus {
+    box-shadow: none;
+    border: 0;
+    transition: 0.3s;
+    background-color: $whitesmoke-color;
+    &::placeholder {
+      font-size: 16px;
+      transition: 0.3s;
+    }
+  }
+}
+
+// style
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  box-sizing: border-box;
+  background-color: $white-color;
+  color: $black-color;
+  font-weight: 300;
+  overflow-x: hidden;
+}
