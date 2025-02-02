@@ -80,7 +80,7 @@
   }
   .jumbotron-1 {
     background: linear-gradient(90deg, #8d8d8d27, #00000023),
-      url(/src/img/jumbotron-bg-1.jpg);
+      url(../src/img/jumbotron-bg-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -93,7 +93,7 @@
   }
   .jumbotron-2 {
     color: $white-color;
-    background: url(/src/img/jumbotron-bg-2.jpg);
+    background: url(../src/img/jumbotron-bg-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
