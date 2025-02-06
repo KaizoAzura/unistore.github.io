@@ -22,6 +22,120 @@
     />
   </head>
   <body>
+    <!-- offcanvas -->
+    <!-- offcanvas Search -->
+    <div
+      class="offcanvas offcanvas-top offcanvas-search"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasSearch"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSearch">Search Product</h5>
+        <button
+          type="button"
+          class="btn ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body pt-0">
+        <form class="d-flex" role="search">
+          <!-- Tombol dengan Tooltip -->
+          <button
+            class="btn me-2"
+            data-bs-toggle="tooltip"
+            data-bs-title="Search by image"
+            id="uploadButton"
+          >
+            <i class="fa-solid fa-camera"></i>
+          </button>
+
+          <!-- Input File (Disembunyikan) -->
+          <input
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            capture="environment"
+            style="display: none"
+          />
+
+          <!-- end input file -->
+
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- end offcanvas search -->
+    <!-- offcanvas Notif -->
+    <div
+      class="offcanvas offcanvas-end offcanvas-notif"
+      tabindex="-1"
+      id="offcanvasNotif"
+      aria-labelledby="offcanvasNotif"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Notifications</h5>
+        <button
+          type="button"
+          class="btn ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="offcanvas-body pt-0">
+        <!-- Gambar jika tidak ada notifikasi -->
+        <div id="emptyNotif" class="text-center">
+          <img src="src/img/notif-bg.webp" alt="No Notifications" width="150" />
+          <p class="mt-2">No notifications</p>
+        </div>
+
+        <!-- Tempat menampilkan notifikasi -->
+        <ul
+          id="notifList"
+          class="list-group mb-3 navbar-nav d-flex flex-column align-items-center"
+        >
+          <li
+            class="nav-item my-1 border w-100 py-2 px-3 rounded d-flex align-items-center justify-content-between flex-wrap"
+          >
+            You got a new Message!
+            <button class="btn btn-delete ms-2">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </li>
+          <li
+            class="nav-item my-1 border w-100 py-2 px-3 rounded d-flex align-items-center justify-content-between flex-wrap"
+          >
+            Your product has been Canceled!
+            <button class="btn btn-delete ms-2">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tombol hapus semua notifikasi -->
+        <button id="clearAllBtn" class="btn w-100">
+          Clear All Notifications
+        </button>
+      </div>
+    </div>
+
+    <!-- end offcanvas Notif -->
+    <!-- end offcanvas -->
+
     <!-- sidebar -->
     <section class="sidebar fixed-top px-3">
       <!-- header sidebar -->
@@ -61,6 +175,12 @@
             ><span class="text-icon">Cart</span></a
           >
         </li>
+        <li class="nav-item">
+          <a class="nav-link my-1 px-2 rounded" href="#!"
+            ><i class="fa-solid fa-inbox"></i
+            ><span class="text-icon">Inbox</span></a
+          >
+        </li>
         <hr class="my-2" />
         <li class="nav-item">
           <a class="nav-link my-1 px-2 rounded" href="#!"
@@ -75,18 +195,6 @@
           >
         </li>
         <hr class="my-2" />
-        <li class="nav-item">
-          <a class="nav-link my-1 px-2 rounded" href="#!"
-            ><i class="fa-solid fa-store"></i
-            ><span class="text-icon">Seller</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link my-1 px-2 rounded" href="#!"
-            ><i class="fa-solid fa-gear"></i
-            ><span class="text-icon">Setting</span></a
-          >
-        </li>
         <li class="nav-item">
           <a class="nav-link my-1 px-2 rounded" href="#!"
             ><i class="fa-regular fa-circle-question"></i
@@ -120,34 +228,107 @@
 
           <div class="menu-nav">
             <ul class="navbar-nav ms-auto">
-              <!-- form 992px up -->
-              <form class="d-none d-lg-flex" role="search">
-                <input
-                  class="form-control me-2 search-form"
-                  type="search"
-                  placeholder="Search Product..."
-                  aria-label="Search"
-                />
-                <button class="btn btn-nav" type="submit">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </form>
-              <!-- end form 992px up -->
-              <li class="nav-item d-lg-none">
-                <a class="btn btn-nav ms-2" href="#!"
+              <li class="nav-item">
+                <a
+                  class="btn btn-nav ms-2"
+                  href="#offcanvasSearch"
+                  data-bs-toggle="offcanvas"
                   ><i class="fa-solid fa-magnifying-glass"></i
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-nav ms-2" href="#!"
+                <a
+                  class="btn btn-nav ms-2"
+                  href="#offcanvasNotif"
+                  data-bs-toggle="offcanvas"
                   ><i class="fa-regular fa-bell"></i
                 ></a>
               </li>
-              <li class="nav-item">
-                <a class="btn btn-nav ms-2 profile" href="#!"
-                  ><img src="src/img/profil.JPG" alt="Profile"
-                /></a>
+              <li class="nav-item dropdown">
+                <a
+                  class="btn btn-nav ms-2 profile"
+                  href="#"
+                  id="profileDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="src/img/profil.JPG"
+                    alt="Profile"
+                    width="40"
+                    height="40"
+                    class="rounded"
+                  />
+                </a>
+
+                <ul
+                  class="dropdown-menu dropdown-menu-end p-0"
+                  aria-labelledby="profileDropdown"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item py-2 rounded d-flex align-items-center"
+                      href="#profile"
+                      ><i class="fa-solid fa-pen-to-square me-2"></i>Edit
+                      Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item py-2 rounded d-flex align-items-center"
+                      href="#profile"
+                      ><i class="fa-solid fa-sun me-2"></i>Theme</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item py-2 rounded d-flex align-items-center"
+                      href="#profile"
+                      ><i class="fa-solid fa-globe me-2"></i>Languange</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item py-2 rounded d-flex align-items-center"
+                      href="#profile"
+                      ><i class="fa-solid fa-map-location-dot me-2"></i
+                      >Location</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item py-2 rounded" href="#settings"
+                      ><i class="fa-solid fa-gear me-2"></i>Settings</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item py-2 rounded d-flex align-items-center"
+                      href="#profile"
+                      ><i class="fa-solid fa-store me-2"></i>Become Seller</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item py-2 rounded d-flex align-items-center"
+                      href="#profile"
+                      ><i class="fa-solid fa-user me-2"></i>Change Account</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item py-2 rounded text-danger"
+                      href="#logout"
+                      ><i class="fa-solid fa-right-from-bracket me-2"></i
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
               </li>
+
               <li class="nav-item d-lg-none">
                 <a class="btn btn-nav ms-2 sidebar-toggler" href="#!"
                   ><i class="fa-solid fa-bars"></i
@@ -159,243 +340,7 @@
       </nav>
       <!-- end navbar -->
       <!-- main content -->
-      <div class="main-content py-2">
-        <div class="container-fluid">
-          <!-- jumbotron -->
-          <div class="row">
-            <div class="col-12 col-lg-8">
-              <div class="jumbotron-1 jumbotron rounded p-3">
-                <h1>Check Out Today's Flashsale</h1>
-                <p class="d-none d-sm-flex">
-                  Get ready for an electrifying shopping experience! Offering
-                  deals for a limited time.
-                </p>
-                <a href="#!" class="btn btn-orange">Shop the sale</a>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4 mt-3 mt-lg-0">
-              <div class="jumbotron-2 jumbotron rounded p-3">
-                <h1>Summer Sale</h1>
-                <p class="d-none d-sm-flex">Discount 40%</p>
-                <a href="#!" class="btn btn-orange">Shop Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- end jumbotron -->
-          <!-- category -->
-          <div class="card my-3 category">
-            <div class="card-body">
-              <div class="row">
-                <!-- Featured Categories -->
-                <div class="col-12 col-lg-6 mb-3">
-                  <h5 class="fw-bold">Featured Categories</h5>
-                  <div class="row featured-product">
-                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
-                      <a href="#!" class="product-container rounded py-2 px-3">
-                        <img src="src/img/macbook.png" alt="macbook" />
-                        <h6 class="mt-2">Macbook</h6></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
-                      <a href="#!" class="product-container rounded py-2 px-3">
-                        <img src="src/img/iphone.png" alt="iphone" />
-                        <h6 class="mt-2">iPhone</h6></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
-                      <a href="#!" class="product-container rounded py-2 px-3">
-                        <img src="src/img/playstation.png" alt="playstation" />
-                        <h6 class="mt-2">PlayStation</h6></a
-                      >
-                    </div>
-                    <div class="col-6 col-sm-4 col-xl-3 mt-3 mt-lg-0 py-2">
-                      <a href="#!" class="product-container rounded py-2 px-3">
-                        <img src="src/img/airpods.png" alt="airpods.png" />
-                        <h6 class="mt-2">AirPods</h6></a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- end Featured Categories -->
-                <!-- bill categories -->
-                <div class="col-12 col-lg-6 mb-3">
-                  <div
-                    class="d-flex align-items-center justify-content-between"
-                  >
-                    <h5 class="fw-bold mb-3">Top Up & Bills</h5>
-                    <a href="#!" class="mb-3 nav-link text-green">View All</a>
-                  </div>
-
-                  <div class="card bill-container p-0">
-                    <div class="card-body">
-                      <div class="row px-2">
-                        <div class="row bill-row">
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Education"
-                              ><i
-                                class="fa-solid fa-graduation-cap"
-                                style="color: #ffd43b"
-                              ></i
-                              ><span>Education</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Electricity bills"
-                              ><i
-                                class="fa-solid fa-bolt"
-                                style="color: #63e6be"
-                              ></i
-                              ><span>Electricity bills</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Internet & TV Upgrade"
-                              ><i
-                                class="fa-solid fa-wifi"
-                                style="color: #74c0fc"
-                              ></i
-                              ><span>Internet & TV Upgrade</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Water"
-                              ><i
-                                class="fa-solid fa-faucet"
-                                style="color: #b197fc"
-                              ></i
-                              ><span>Water</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Data Package"
-                              ><i
-                                class="fa-solid fa-mobile-retro"
-                                style="color: #ffd43b"
-                              ></i
-                              ><span>Data Package</span></a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row px-2 mt-4">
-                        <div class="row bill-row">
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Hotel"
-                              ><i
-                                class="fa-solid fa-hotel"
-                                style="color: #63e6be"
-                              ></i
-                              ><span>Hotel</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Flight Ticket"
-                              ><i
-                                class="fa-solid fa-plane"
-                                style="color: #74c0fc"
-                              ></i
-                              ><span>Flight Ticket</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Event & Entertainment"
-                              ><i
-                                class="fa-solid fa-guitar"
-                                style="color: #b197fc"
-                              ></i
-                              ><span>Event & Entertainment</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Food & Voucher"
-                              ><i
-                                class="fa-solid fa-bowl-food"
-                                style="color: #ffd43b"
-                              ></i
-                              ><span>Food & Voucher</span></a
-                            >
-                          </div>
-                          <div
-                            class="col-6 col-sm-3 col-md-2 col-lg-4 col-xl-3 px-2"
-                          >
-                            <a
-                              href="#!"
-                              class="btn-icon btn"
-                              data-bs-toggle="tooltip"
-                              data-bs-title="Trains Ticket"
-                              ><i
-                                class="fa-solid fa-train"
-                                style="color: #63e6be"
-                              ></i
-                              ><span>Trains Ticket</span></a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- end bill categories -->
-              </div>
-            </div>
-          </div>
-          <!-- end category -->
-        </div>
-      </div>
+      <div class="main-content py-2"></div>
       <!-- end main content -->
     </section>
     <!-- end content -->

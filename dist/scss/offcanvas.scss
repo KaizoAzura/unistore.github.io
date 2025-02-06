@@ -1,0 +1,22 @@
+@import "root";
+
+// style
+.offcanvas {
+  z-index: 999999999;
+  //   offcanvas search
+  &.offcanvas-search {
+    height: 100vh;
+  }
+  // offcanvas notif
+  &.offcanvas-notif {
+    #notifList {
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.offcanvas-backdrop {
+  z-index: 9999999;
+}

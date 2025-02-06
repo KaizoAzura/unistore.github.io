@@ -67,6 +67,12 @@ $whitesmoke-color: whitesmoke;
   }
 }
 
+.tooltip {
+  z-index: 999999999999;
+  font-family: "Public Sans", sans-serif;
+  font-size: 14px;
+}
+
 // style
 body {
   margin: 0;

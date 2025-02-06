@@ -83,4 +83,18 @@ body {
 }
 body .text-green {
   color: #10b981;
-}/*# sourceMappingURL=root.css.map */
+}
+
+.offcanvas {
+  z-index: 999999999;
+}
+.offcanvas.offcanvas-search {
+  height: 100vh;
+}
+.offcanvas.offcanvas-notif #notifList li {
+  font-size: 16px;
+}
+
+.offcanvas-backdrop {
+  z-index: 9999999;
+}/*# sourceMappingURL=offcanvas.css.map */
