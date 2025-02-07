@@ -87,6 +87,12 @@
 
 // main content
 .main-content {
+  .carousel-item {
+    img {
+      height: 175px;
+      object-fit: fill;
+    }
+  }
 }
 
 // responsive 576px up
@@ -94,6 +100,15 @@
   .sidebar {
     width: 50%;
     border-right: 1px solid $lightgray-color;
+  }
+
+  .main-content {
+    .carousel-item {
+      img {
+        height: 250px;
+        object-fit: fill;
+      }
+    }
   }
 }
 
@@ -141,8 +156,25 @@
       transition: 0.3s;
     }
   }
+
+  .main-content {
+    .carousel-item {
+      img {
+        height: 300px;
+        object-fit: fill;
+      }
+    }
+  }
 }
 
 // responsive 1200px up
 @media (min-width: 1200px) {
+  .main-content {
+    .carousel-item {
+      img {
+        height: 400px;
+        object-fit: fill;
+      }
+    }
+  }
 }

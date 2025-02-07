@@ -263,10 +263,21 @@ body .text-green {
   color: #ffffff;
 }
 
+.main-content .carousel-item img {
+  height: 175px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 @media (min-width: 576px) {
   .sidebar {
     width: 50%;
     border-right: 1px solid #d3d3d3;
+  }
+  .main-content .carousel-item img {
+    height: 250px;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 @media (min-width: 768px) {
@@ -309,5 +320,17 @@ body .text-green {
   .content.shrink {
     margin-left: 200px;
     transition: 0.3s;
+  }
+  .main-content .carousel-item img {
+    height: 300px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+@media (min-width: 1200px) {
+  .main-content .carousel-item img {
+    height: 400px;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }/*# sourceMappingURL=main.css.map */
