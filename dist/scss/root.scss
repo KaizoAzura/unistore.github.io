@@ -86,4 +86,7 @@ body {
   .text-green {
     color: $green-color;
   }
+  &.overflow-hidden {
+    overflow: hidden;
+  }
 }

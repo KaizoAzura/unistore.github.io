@@ -85,6 +85,9 @@ body {
 body .text-green {
   color: #10b981;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
 
 .btn {
   background-color: whitesmoke;
@@ -171,6 +174,9 @@ body {
 body .text-green {
   color: #10b981;
 }
+body.overflow-hidden {
+  overflow: hidden;
+}
 
 .offcanvas {
   z-index: 999999999;
@@ -236,6 +242,7 @@ body .text-green {
   overflow-x: hidden;
   transform: translateX(-100%);
   transition: 0.3s;
+  overflow-y: auto;
 }
 .sidebar.expand {
   transform: translateX(0);
@@ -267,6 +274,43 @@ body .text-green {
   height: 175px;
   -o-object-fit: fill;
      object-fit: fill;
+}
+.main-content .card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.main-content .card-container::-webkit-scrollbar {
+  display: none;
+}
+.main-content .card {
+  scroll-snap-align: center;
+}
+.main-content .card.product-card {
+  text-decoration: none;
+}
+.main-content .card.product-card img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+.main-content .card.product-card .card-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.main-content .card.product-card .price-tag {
+  background-color: whitesmoke;
+  color: #101010;
+  font-size: 16px;
+  font-weight: 500;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 @media (min-width: 576px) {
@@ -325,6 +369,13 @@ body .text-green {
     height: 300px;
     -o-object-fit: fill;
        object-fit: fill;
+  }
+  .main-content .card.product-card {
+    transition: 0.3s;
+  }
+  .main-content .card.product-card:hover {
+    box-shadow: 0 0 15px 5px whitesmoke;
+    transition: 0.3s;
   }
 }
 @media (min-width: 1200px) {

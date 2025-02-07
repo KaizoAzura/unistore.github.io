@@ -83,4 +83,7 @@ body {
 }
 body .text-green {
   color: #10b981;
+}
+body.overflow-hidden {
+  overflow: hidden;
 }/*# sourceMappingURL=root.css.map */

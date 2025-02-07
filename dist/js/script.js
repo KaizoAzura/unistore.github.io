@@ -1,13 +1,21 @@
 const content = document.querySelector(".content");
 const sidebar = document.querySelector(".sidebar");
-const sidebarTogglers = document.querySelectorAll(".sidebar-toggler"); // Pakai querySelectorAll
+const sidebarTogglers = document.querySelectorAll(".sidebar-toggler");
 const btnClose = document.getElementById("btnClose");
+const body = document.body; // Ambil elemen body
 
 // Looping agar semua tombol dengan class "sidebar-toggler" punya event listener
 sidebarTogglers.forEach((toggler) => {
   toggler.addEventListener("click", function () {
     sidebar.classList.toggle("expand");
     content.classList.toggle("shrink");
+
+    // Tambahkan atau hapus class overflow-hidden ke body
+    if (sidebar.classList.contains("expand")) {
+      body.classList.add("overflow-hidden");
+    } else {
+      body.classList.remove("overflow-hidden");
+    }
   });
 });
 
@@ -15,6 +23,7 @@ sidebarTogglers.forEach((toggler) => {
 btnClose.addEventListener("click", function () {
   sidebar.classList.remove("expand");
   content.classList.remove("shrink");
+  body.classList.remove("overflow-hidden"); // Hapus class saat sidebar ditutup
 });
 
 // tooltips
